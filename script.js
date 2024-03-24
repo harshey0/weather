@@ -13,7 +13,7 @@ document.body.style.backgroundImage = `url(${response.data.results[0].urls.regul
 document.body.style.backgroundSize = "cover";
 }
 catch (error) {
-    document.body.style.backgroundImage = "none";
+    document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?beach')`;
     console.error('Error fetching location picture:', error);
 
 }
@@ -41,6 +41,7 @@ try{
         document.querySelector(".icon").src = "";
         document.querySelector(".humidity").innerHTML="";
         document.querySelector(".wind").innerHTML="";
+        document.body.style.backgroundImage = "none";
         console.error('Error fetching weather data:', error);
 
     }
